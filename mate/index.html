@@ -95,7 +95,8 @@
         var loader = new THREE.PLYLoader();
         loader.load( './mate-fused.ply', function ( geometry ) {
           material = new THREE.PointsMaterial( { size: 1, sizeAttenuation: false, alphaTest: 0.1, transparent: true } );
-          material.color.setRGB( 0.0, 0.5, 0.0 );
+          material.color.setRGB( 0.0, 0.9, 0.0 );
+          material.opacity = 0.2;
 
           var particles = new THREE.Points( geometry, material );
           particles.position.x = 0.0;
